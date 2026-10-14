@@ -3,7 +3,8 @@ import requests
 url = "https://api.open-meteo.com/v1/forecast?latitude=-21.85&longitude=-47.48&hourly=apparent_temperature,precipitation_probability,uv_index&forecast_days=7&timezone=America/Sao_Paulo"
 
 def buscarPrevisao():
-    request = requests.get(url)
+    request = requests.get(url, timeout=10)
+    request.raise_for_status()
     hourly = request.json()["hourly"]
 
     hours = []

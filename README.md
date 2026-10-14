@@ -1,11 +1,13 @@
 #Nimbus
 Serviço que consulta a previsão do tempo por hora e indica janelas boas ou ruins para correr, com base em regras próprias sobre UV, sensação térmica e chance de chuva. Roda sozinho, dentro de um container Docker, com tratamento de falha de API.
 
-Status: em desenvolvimento. 
-A extração de dados da API ✅; 
-Aplicação da regra; ❌
-Agendamento; ❌
-Containerização ainda estão em construção; ❌
+> Status: v1 funcionando. Falta o tratamento de falha da API (retry).
+
+- ✅ Extração de dados da API
+- ✅ Aplicação da regra
+- ✅ Agendamento
+- ✅ Containerização (Docker)
+- ⏳ Retry e cooldown em caso de falha da API
 
 Por que esse projeto existe
 
